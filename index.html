@@ -55,11 +55,13 @@
 <a id="关于c-stl-容器包括string内存的释放" class="anchor" href="#%E5%85%B3%E4%BA%8Ec-stl-%E5%AE%B9%E5%99%A8%E5%8C%85%E6%8B%ACstring%E5%86%85%E5%AD%98%E7%9A%84%E9%87%8A%E6%94%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>关于C++ STL 容器（包括string）内存的释放</h2>
 
 <p>如果不进行强制释放，内存会被占据知道容器生命周期结束。（甚至占据非自己内存不释放）
-可用如下代码段进行强制释放。
+可用如下代码段进行强制释放。</p>
+<p>
     obj_container...
     {
         tmp_container.swap(obj_container);
-    }</p>
+    }
+</p>    
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
