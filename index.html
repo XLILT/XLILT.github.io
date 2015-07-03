@@ -57,9 +57,11 @@
 <p>如果不进行强制释放，内存会被占据知道容器生命周期结束。（甚至占据非自己内存不释放）
 可用如下代码段进行强制释放。</p>
 
-<pre><code>obj_container...
+<pre><code>
+vector<int> obj_v;
 {
-    tmp_container.swap(obj_container);
+  vector<int> tmp_v;  //empty container
+  tmp_v.swap(obj_v);
 }
 </code></pre>
       </section>
