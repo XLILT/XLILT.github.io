@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>操作系统内存碎片</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+
+    <section class="main-content">
+
+<h4>
+<a id="1关于c-stl-容器包括string内存的释放" class="anchor" href="#1%E5%85%B3%E4%BA%8Ec-stl-%E5%AE%B9%E5%99%A8%E5%8C%85%E6%8B%ACstring%E5%86%85%E5%AD%98%E7%9A%84%E9%87%8A%E6%94%BE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1、关于C++ STL 容器（包括string）内存的释放</h4>
+
+<pre>
+    如果不进行强制释放，内存会被占据直到容器生命周期结束（甚至占据非自己内存不释放，此处经测试可能为内存碎片会导致不能释放）。用如下代码段进行强制释放。
+
+    obj_container...
+    {
+        tmp_container.swap(obj_container);
+    }
+</pre>
+
+    </section>
+
+
+  </body>
+</html>
