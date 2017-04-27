@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <title>C++心得总结</title>
+</head>
+
+<body>
+<section class="main-content">
+<pre>
+    C++静态库的链接问题。C++静态库(.a)存在重复定义符号（函数）的风险。说明如下：
+        （1）、在a文件中定义函数f，编译生成a.o
+        （2）、在b文件中定义同样原型的函数f，实现与a中不同，编译生成b.o
+        （3）、将a.o,b.o打包到同一个静态库文件c.a
+        （4）、使用f，并链接c.a，将导致链接到第一个找到的符号。
+    总结：神坑，不知道怎么填。
+</pre>
+</section>
+</body>
+
+</html>
