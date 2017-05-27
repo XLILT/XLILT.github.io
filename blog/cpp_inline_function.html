@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <title>C++内联函数</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/github-light.css" media="screen">
   </head>
   <body>
 
@@ -37,7 +36,8 @@ inline的位置，并非为绑定具体实现到声明的位置。
 
     补充一点关于"const char *”知识。
     （1）头文件中可以定义非静态常量，不会出现重复定义错误。编译器会进行折叠优化。
-    （2）可以通过string.c_str()作为函数返回值（const char *），类型。该指针不会随着string对象析构而失效。编译器进行常量优化。
+    （2）可以通过string.c_str()作为函数返回值（const char *），类型。
+	该指针不会随着string对象析构而失效。编译器进行常量优化。
 </pre>
 
     </section>
