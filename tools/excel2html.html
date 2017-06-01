@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Excel表格转成html表格</title>
+</head>
+<body>
+    <div align="center">
+        <span>请输入表格内容：</span><br/>
+        <textarea rows="30" cols="200"  id="in_text" autofocus></textarea><br/>
+        <input type="submit" value="转换" onclick="javascript:transform_to_html()">
+        <hr/>
+    </div>
+    <div>
+        <pre><textare id="out_text">结果显示区域</textare></pre>
+    </div>
+
+    <script type="text/javascript">
+        function html2Escape(sHtml) {
+        return sHtml.replace(/[<>&"]/g,function(c){return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];});
+        }
+
+        function escape2Html(str) {
+            var arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"'};
+            return str.replace(/&(lt|gt|nbsp|amp|quot);/ig,function(all,t){return arrEntities[t];});
+        }
+
+        function transform_to_html()
+        {
+            var in_text = document.getElementById("in_text").value.split("\n");
+            if (in_text.length <= 0) {
+                return;
+            };
+
+            var out_text = "<table border='1'>\n\t<tr>";
+            var header_line = in_text[0].split(/\s+/);
+            for (var i = 0; i < header_line.length; i++) {
+                out_text += "\n\t\t<th>" + header_line[i] + "</th>";
+            };
+
+            out_text += "\n\t</tr>";
+
+            for (var i = 1; i < in_text.length; i++) {
+                var data_line = in_text[i].split(/\s+/);
+
+                out_text += "\n\t<tr>";
+                for (var j = 0; j < data_line.length; j++) {
+                    out_text += "\n\t\t<td>" + data_line[j] + "</td>";
+                };
+
+                out_text += "\n\t</tr>";
+            };
+
+            out_text += "\n</table>";
+            document.getElementById("out_text").innerText = out_text;
+        }
+    </script>
+</body>
+</html>
