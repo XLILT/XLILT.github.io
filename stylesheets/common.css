@@ -8,3 +8,20 @@ body {
     min-height: 900px;
     margin: 0 auto;
 }
+
+.bg-head {
+    text-align: center;
+}
+
+.bg-body {
+    text-align: center;
+}
+
+.index-item {
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.bg-foot {
+}
