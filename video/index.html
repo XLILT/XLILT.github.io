@@ -9,13 +9,13 @@
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
-        <link href="lib/videojs/video-js.css" rel="stylesheet">
+        <link href="/lib/videojs/video-js.css" rel="stylesheet">
         <div style="width:350px;height:410px">
             <video id="my-player" controls autoplay preload="auto" class="video-js vjs-big-play-centered vjs-default-skin vjs-fluid">
-                <source src="video/res/test.mp4" type="video/mp4">
+                <source src="res/test.mp4" type="video/mp4">
             </video>
         </div>
-        <script src="lib/videojs/video.js"></script>
+        <script src="/lib/videojs/video.js"></script>
         <script>
             var player = videojs('my-player',  { fluid: true });
             player.ready(function() {
