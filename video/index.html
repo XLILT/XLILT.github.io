@@ -30,7 +30,7 @@
             }
 
             var video_url = theRequest["video"];
-            
+
             console.log(theRequest, video_url);
 
             if (video_url == null) {
@@ -38,8 +38,8 @@
             }
 
             var player = videojs('my-player',  { fluid: true });
-            myPlayer.src(video_url);  //重置video的src
-            myPlayer.load(video_url);  //使video重新加载
+            player.src(video_url);  //重置video的src
+            player.load(video_url);  //使video重新加载
 
             player.ready(function() {
                 player.play();
